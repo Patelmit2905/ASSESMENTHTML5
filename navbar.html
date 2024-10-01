@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav {
+            display: flex;
+            background-color: red;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 0 8px 0 0px;
+        }
+
+    nav * {
+            margin: 0;
+            padding: 0;
+            color: blue;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: larger  ;
+        }
+
+        nav menu {
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+            gap: 10px;
+            font-size: 20px;
+            padding: 10px;
+        }
+
+        .hover1 {
+            position: relative;
+            text-align: center;
+            width: 80px;
+            padding: 5px 10px;
+        }
+
+        nav menu>div * {
+            width: 100%;
+            padding: 5px 0px;
+            box-sizing: border-box;
+            text-align: left;
+            font-size: 16px;
+        }
+
+        .effect1 {
+            background-color:yellow;
+            position: absolute;
+            margin-top: 5px;
+            left: 0px;
+            width: 120px;
+            display: none;
+        }
+
+        .hover2 {
+            background-color: greenyellow;
+            position: absolute;
+            padding-left: 10px;
+            bottom: -135px;
+            left: 0;
+            width: 120px;
+            background-color:rgb(18, 223, 192);
+            display: none;
+        }
+
+        .hover2 div {
+            background-color: blue;
+            position: absolute;
+            top: 0;
+            right: -120px;
+        }
+
+        .nav p {
+            padding: 0px;
+            margin: 0;
+            width: 80px;
+            padding: 5px 10px;
+            text-align: center;
+        }
+
+        .hover1 p {
+            padding: 10px 15px;
+            border-bottom: 2px solid black;
+        }
+
+        .hover2 p {
+            padding: 7px 5px;
+            border-bottom: 2px solid black;
+        }
+
+        .nav button {
+            padding: 5px 10px;
+            border: 0;
+            color: black;
+        }
+
+        .hover1:hover {
+            background-color: black;
+        }
+
+        .hover2:hover {
+            background-color: black;
+        }
+
+        .hover1:hover .effect1 {
+            display: block;
+        }
+
+        .hover1:hover .hover2 {
+            display: block;
+        }
+
+        .effect2 {
+            display: none;
+            padding: 0;
+        }
+
+        .hover2:hover .effect2 {
+            display: block;
+        }
+
+        nav p:not(nav > p):hover {
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <p>Logo</p>
+        <div>
+            <menu>
+                <p>Home</p>
+                <p>About</p>
+                <div class="hover1">Service
+                    <div class="effect1">
+                        <p>Web Design</p>
+                        <p>Marketing</p>
+                        <p>World press</p>
+                    </div>
+                    <div class="hover2">More<span></span>
+                        <div class="effect2">
+                            <p>HTML</p>
+                            <p>CSS</p>
+                            <p>JavaScript</p>
+                            <p>jQuery</p>
+                        </div>
+                    </div>
+                </div>
+                <p>Blogs</p>
+                <p>Contact</p>
+                <button>Log in</button>
+            </menu>
+        </div>
+    </nav>
+</body>
+
+</html>
